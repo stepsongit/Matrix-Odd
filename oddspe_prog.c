@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <spu_intrisics.h>
 
-int A[32] __attribute__((aligned(16)))={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,33,34};
+int ABC[32] __attribute__((aligned(16)))={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,33,34};
 int B[32] __attribute__((aligned(16)));
 int E[32] __attribute__((aligned(16)));
 
@@ -9,7 +9,7 @@ int i,j,s,t;
 
 int main(unsigned long long spe, unsigned long long argv, unsigned long long envp)
 {
-	__vector signed int *vA=(__vector signed int *)A;
+	__vector signed int *vABC=(__vector signed int *)ABC;
 	__vector signed int *vB=(__vector signed int *)B;
 	__vector signed int vC[8];
 	__vector signed int vD[8];
